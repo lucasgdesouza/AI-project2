@@ -97,7 +97,6 @@ class ValueIterationAgent(ValueEstimationAgent):
         best_action = None
         max_q = float('-inf')
         for action in self.mdp.getPossibleActions(state):
-            self.noise = 0.0
             q = self.computeQValueFromValues(state, action)
             if q > max_q:
                 max_q = q
